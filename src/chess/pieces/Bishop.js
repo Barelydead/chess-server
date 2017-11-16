@@ -11,10 +11,11 @@ class Bishop {
     /**
      * init
      */
-    constructor() {
+    constructor(color) {
         this.symbol = "B";
         this.moved = 0;
         this.active = true;
+        this.color = color;
     }
 
     move() {

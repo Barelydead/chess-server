@@ -11,10 +11,11 @@ class King {
     /**
      * init
      */
-    constructor() {
+    constructor(color) {
         this.symbol = "K";
         this.moved = 0;
         this.active = true;
+        this.color = color;
     }
 
     canMove(xy, newXy) {

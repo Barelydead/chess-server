@@ -11,10 +11,11 @@ class Rook {
     /**
      * init
      */
-    constructor() {
+    constructor(color) {
         this.symbol = "R";
         this.moved = 0;
         this.active = true;
+        this.color = color;
     }
 
     move() {

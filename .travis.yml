@@ -7,6 +7,9 @@ node_js:
 
 sudo: false
 
+notifications:
+  email: false
+
 git:
     submodules: false
 

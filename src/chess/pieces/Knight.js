@@ -11,10 +11,11 @@ class Knight {
     /**
      * init
      */
-    constructor() {
-        this.symbol = "Kn";
+    constructor(color) {
+        this.symbol = "N";
         this.moved = 0;
         this.active = true;
+        this.color = color;
     }
 
     move() {

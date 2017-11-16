@@ -33,7 +33,7 @@ class Board {
     setUpEmptyTable() {
         for (var key in this.board) {
             this.board[key] =
-            ["#", key + 1, key + 2, key + 3, key + 4, key + 5, key + 6, key + 7, key + 8];
+            [key, key + 1, key + 2, key + 3, key + 4, key + 5, key + 6, key + 7, key + 8];
         }
     }
 
@@ -47,6 +47,23 @@ class Board {
         return this.board;
     }
 
+    /**
+     * Check if the is anything blocking the path between 2 squares
+     *
+     * @returns {mixed} - true if free or square Coo if false
+     */
+    checkRow(x, y, nx, ny) {
+
+    }
+
+    /**
+     * Check if the is anything blocking the path between 2 squares
+     *
+     * @returns {mixed} - true if free or square Coo if false
+     */
+    checkDiagonal(x, y, nx, ny) {
+
+    }
 
     /**
      * get a value for a specific square
@@ -77,7 +94,7 @@ class Board {
     move(x, y, nx, ny) {
         const piece = this.getSquare(x, y);
 
-        this.updateSquare(x, y, "#");
+        this.updateSquare(x, y, x + y);
         this.updateSquare(nx, ny, piece);
     }
 
@@ -92,7 +109,11 @@ class Board {
 
         for (var key in this.board) {
             for (let i = 0; i < this.board[key].length; i++) {
-                ascii += this.board[key][i] + " | ";
+                if (typeof this.board[key][i] === "object") {
+                    ascii += this.board[key][i].symbol + " " + this.board[key][i].color + " | "
+                } else {
+                    ascii += this.board[key][i] + " | ";
+                }
             }
             ascii += "<br>";
         }

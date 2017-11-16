@@ -1,27 +1,27 @@
 /**
- * Queen module
+ * Piece module that is parent to all pices
  * @module
  */
 "use strict";
 
 /**
- * Class with Queen logic
+ * Piece class
  */
-class Queen {
+class Piece {
     /**
      * init
      */
     constructor(color) {
-        this.symbol = "Q";
+        this.symbol;
         this.moved = 0;
         this.active = true;
-        this.color = color;
+        this.color;
     }
 
-    move() {
+    canMove() {
 
     }
 }
 
 
-module.exports = Queen;
+module.exports = Piece;

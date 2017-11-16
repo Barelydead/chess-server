@@ -11,10 +11,11 @@ class Pawn {
     /**
      * init
      */
-    constructor() {
+    constructor(color) {
         this.symbol = "P";
         this.moved = 0;
         this.active = true;
+        this.color = color;
     }
 
     move() {

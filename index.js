@@ -1,15 +1,15 @@
 const express = require('express');
 const app = express();
-const Board = require("./src/chess/Board");
-const Pawn = require("./src/chess/pieces/Pawn");
+const Game = require("./src/chess/Game");
 
-let board = new Board();
+const game = new Game();
 
 
 app.get('/', function(req, res) {
-    board.setUpEmptyTable();
+    game.board.getAsciiBoard();
+    game.init();
 
-    res.send(board.getAsciiBoard() + board.getSquare("A", 1));
+    res.send(game.board.getAsciiBoard() + game.board.getSquare("A", 1) + game.turn);
 });
 
 app.listen(3000, () =>

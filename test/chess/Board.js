@@ -44,7 +44,7 @@ describe('move', function() {
 
             board.move("A", 1, "B", 2);
             assert.equal("T", board.getSquare("B", 2));
-            assert.equal("#", board.getSquare("A", 1));
+            assert.equal("A1", board.getSquare("A", 1));
         });
     });
 });
