@@ -1,0 +1,44 @@
+{
+    "name": "chess",
+    "version": "1.0.0",
+    "description": "this is a project that eventually should turn in to a chess game",
+    "main": "index.js",
+    "scripts": {
+        "taskkill": "taskkill /f /im node.exe",
+        "start": "node index.js",
+        "docker-6": "docker-compose run node6 npm test",
+        "docker-8": "docker-compose run node8 npm test",
+        "docker-9": "docker-compose run node9 npm test",
+        "test-scrutinizer": "nyc --all --reporter=clover mocha test/**/*.js",
+        "report-coveralls": "nyc report --reporter=text-lcov | coveralls",
+        "report-codecov": "nyc report --reporter=lcov > coverage.lcov && codecov",
+        "test": "nyc --reporter=html --reporter=text mocha test/**/*.js",
+        "eslint": "eslint .",
+        "stylelint": "stylelint **/*.css",
+        "posttest": "npm run eslint && npm run stylelint"
+    },
+    "dependencies": {
+        "body-parser": "~1.17.1",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.3",
+        "express": "~4.15.2",
+        "morgan": "~1.8.1",
+        "pug": "~2.0.0-beta11",
+        "serve-favicon": "~2.4.2",
+        "test": "^0.6.0"
+    },
+    "devDependencies": {
+        "eslint": "^4.10.0",
+        "eslint-plugin-react": "^7.4.0",
+        "js-yaml": "^3.10.0",
+        "jsonlint": "^1.6.2",
+        "mocha": "^4.0.1",
+        "nyc": "^11.3.0",
+        "codecov": "^3.0.0",
+        "coveralls": "^3.0.0",
+        "stylelint": "^8.2.0",
+        "uglify-js": "^3.1.6"
+    },
+    "author": "Christofer jungberg",
+    "license": "ISC"
+}
