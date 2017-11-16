@@ -12,7 +12,7 @@ Chess server
 Server to run a chess app
 
 
-### Install
+### Install 
 ```
 git clone https://github.com/Barelydead/chess-server.git
 ```
