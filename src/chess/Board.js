@@ -110,12 +110,12 @@ class Board {
         for (var key in this.board) {
             for (let i = 0; i < this.board[key].length; i++) {
                 if (typeof this.board[key][i] === "object") {
-                    ascii += this.board[key][i].symbol + " " + this.board[key][i].color + " | "
+                    ascii += this.board[key][i].symbol + this.board[key][i].color[0] +  " | "
                 } else {
-                    ascii += this.board[key][i] + " | ";
+                    ascii += this.board[key][i] +  " | ";
                 }
             }
-            ascii += "<br>";
+            ascii += "\n";
         }
         return ascii;
     }
