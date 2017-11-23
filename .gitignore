@@ -3,3 +3,4 @@
 /.nyc_output
 /client
 /coverage
+/test/socket
